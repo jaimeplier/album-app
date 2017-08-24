@@ -1,0 +1,25 @@
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+</head>
+
+<div id="container"  >
+  
+  <h1 >
+   <a routerLink=""> <i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+   {{ this.album.name }}
+   
+   <i class="fa fa-music"></i></h1>
+  <ul *ngFor="let song of this.album.songs; let i = index">
+    <li>
+    <span (click)="deleteSong(i)" class="clickable">
+    <i class="fa fa-trash"></i></span>
+     {{ song }}
+  </ul>
+  <input 
+    type="text" 
+    placeholder="Add new song" 
+    #songInput>
+    <button class="btn btn-primary btn-block text-center" (click)="addSong(songInput.value)">Add song!</button>
+</div>
+

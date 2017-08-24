@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { SongsComponent } from './songs/songs.component';
 
 import { AppComponent } from './app.component';
 

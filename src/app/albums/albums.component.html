@@ -1,0 +1,23 @@
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+</head>
+
+<div id="container">
+  <h1>Albums <i class="fa fa-music"></i></h1>
+  <ul *ngFor="let album of albums; let i = index">
+    <li>
+    <a href="#"><span (click)="deleteAlbum(i)">
+    <i class="fa fa-trash"></i></span></a>
+    <a
+    [routerLink]= "[ album.name ]" 
+    (click)="testAPI(album.name)" > {{ album.name }}</a></li> 
+  </ul>
+  <input 
+    type="text" 
+    placeholder="Add New Album" 
+    #albumInput>
+    <button class="btn btn-primary btn-block text-center" 
+    (click)="addAlbum(albumInput.value)">Add Album</button>
+</div>
+
