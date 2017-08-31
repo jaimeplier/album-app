@@ -1,4 +1,4 @@
-App can be run via `node server.js` and port `http://localhost:3000/` (after npm install) .
+App can be run via `node server.js` (inside server folder) and port `http://localhost:3000/` (after npm install) .
 
 
 # AlbumApp
